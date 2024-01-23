@@ -128,29 +128,31 @@ export function CityPickerSidebar() {
             <PopoverContent className="w-[200px] p-0">
               <Command>
                 <CommandInput placeholder="Search city..." className="h-9" />
-                <CommandEmpty>No city found.</CommandEmpty>
-                <CommandGroup>
-                  {City.getCitiesOfCountry(selectedCountry.isoCode)?.map(
-                    (city, index) => (
-                      <CommandItem
-                        key={index}
-                        value={city as unknown as string}
-                        // @ts-expect-error
-                        onSelect={() => handleSelectedCity(city)}
-                      >
-                        {city.name}
-                        <CheckIcon
-                          className={cn(
-                            "ml-auto h-4 w-4",
-                            selectedCity?.name === city.name
-                              ? "opacity-100"
-                              : "opacity-0"
-                          )}
-                        />
-                      </CommandItem>
-                    )
-                  )}
-                </CommandGroup>
+                <ScrollArea className="h-96">
+                  <CommandEmpty>No city found.</CommandEmpty>
+                  <CommandGroup>
+                    {City.getCitiesOfCountry(selectedCountry.isoCode)?.map(
+                      (city, index) => (
+                        <CommandItem
+                          key={index}
+                          value={city as unknown as string}
+                          // @ts-expect-error
+                          onSelect={() => handleSelectedCity(city)}
+                        >
+                          {city.name}
+                          <CheckIcon
+                            className={cn(
+                              "ml-auto h-4 w-4",
+                              selectedCity?.name === city.name
+                                ? "opacity-100"
+                                : "opacity-0"
+                            )}
+                          />
+                        </CommandItem>
+                      )
+                    )}
+                  </CommandGroup>
+                </ScrollArea>
               </Command>
             </PopoverContent>
           </Popover>
