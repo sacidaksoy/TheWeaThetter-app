@@ -31,7 +31,7 @@ export default function CountryDialog() {
       open={open}
       onOpenChange={setOpen}
       title="Select Country & City"
-      description="What's the weather in your city today?"
+      description="What&apos;s the weather in your city today?"
       content={
         <div className="flex flex-col items-start justify-between space-y-2 my-4">
           <CityPickerDialog />
@@ -39,7 +39,7 @@ export default function CountryDialog() {
       }
       actions={
         <Button variant="outline" onClick={handleClickSave}>
-          Let's Go
+          Let&apos;s Go
         </Button>
       }
     />
