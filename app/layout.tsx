@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          forcedTheme="dark"
+          // forcedTheme="dark"
           storageKey="dashboard-theme"
         >
           <ReactQueryProvider>{children}</ReactQueryProvider>
