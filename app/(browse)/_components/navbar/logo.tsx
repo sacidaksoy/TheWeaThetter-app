@@ -15,17 +15,17 @@ export default function Logo() {
       <div className="flex items-center gap-x-4 hover:opacity-75 transition">
         <div className="bg-white rounded-full p-1 mr-12 shrink-0 lg:mr-0 lg:shrink">
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="logo"
-            // className="w-23 h-10"
+            className="w-8 h-8"
             width={110}
             height={110}
             priority
           />
         </div>
         <div className={cn("hidden lg:block", font.className)}>
-          <p className="text-base font-medium">E-İhracat Portal</p>
-          {/* <p className="text-xs text-muted-foreground">Let&apos;s deep dive</p> */}
+          <p className="text-base font-medium">TheWeaThetter</p>
+          <p className="text-xs text-muted-foreground">Let&apos;s deep dive</p> 
         </div>
       </div>
     </Link>
